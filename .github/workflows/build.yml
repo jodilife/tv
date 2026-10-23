@@ -39,9 +39,6 @@ jobs:
           yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
-      - name: Generate Gradle wrapper
-        run: gradle wrapper --gradle-version 8.4
-
       - name: Build debug APK
         run: ./gradlew assembleDebug --stacktrace
 
